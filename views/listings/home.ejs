@@ -1,0 +1,77 @@
+<% layout("/layouts/boilerplate") %>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-overlay">
+    <h1>Find your next perfect stay</h1>
+    <p>Discover unique homes, cozy cabins, and unforgettable experiences across the world.</p>
+    <form action="/listings" method="GET" class="hero-search">
+      <input type="text" name="search" placeholder="Search destinations, cities, countries..." />
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </form>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="container mt-5">
+  <h4 class="fw-bold mb-4">Explore by type</h4>
+  <div class="row g-3 text-center">
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=beach" class="category-card">
+        <div class="category-icon">🏖️</div>
+        <p>Beach</p>
+      </a>
+    </div>
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=mountain" class="category-card">
+        <div class="category-icon">🏔️</div>
+        <p>Mountain</p>
+      </a>
+    </div>
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=villa" class="category-card">
+        <div class="category-icon">🏡</div>
+        <p>Villa</p>
+      </a>
+    </div>
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=cabin" class="category-card">
+        <div class="category-icon">🪵</div>
+        <p>Cabin</p>
+      </a>
+    </div>
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=city" class="category-card">
+        <div class="category-icon">🏙️</div>
+        <p>City</p>
+      </a>
+    </div>
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=island" class="category-card">
+        <div class="category-icon">🏝️</div>
+        <p>Island</p>
+      </a>
+    </div>
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=lake" class="category-card">
+        <div class="category-icon">🌊</div>
+        <p>Lake</p>
+      </a>
+    </div>
+    <div class="col-6 col-md-3">
+      <a href="/listings?search=castle" class="category-card">
+        <div class="category-icon">🏰</div>
+        <p>Castle</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="home-cta mt-5">
+  <div class="home-cta-inner">
+    <h2>Ready to explore?</h2>
+    <p>Browse hundreds of unique stays handpicked for every kind of traveller.</p>
+    <a href="/listings" class="btn btn-light fw-bold px-4 py-2 rounded-pill">Browse All Listings</a>
+  </div>
+</section>

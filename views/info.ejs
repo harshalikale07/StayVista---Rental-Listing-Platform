@@ -1,0 +1,91 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container mt-5" style="max-width:700px; min-height:50vh;">
+
+  <% if (page === "about") { %>
+    <h2>About StayVista</h2>
+    <p class="text-muted mt-3">
+      StayVista is a rental listing platform that connects travellers with unique stays across India and beyond.
+      Our mission is to make travel more personal, affordable, and memorable for everyone.
+    </p>
+    <p>Whether you're looking for a beachside bungalow, a mountain cabin, or a city apartment — we've got you covered.</p>
+
+  <% } else if (page === "help") { %>
+    <h2>Help Center</h2>
+    <p class="text-muted mt-3">Need help? Here are some common topics:</p>
+    <ul class="mt-3">
+      <li class="mb-2"><strong>Creating a listing</strong> — Click "Create" in the navbar and fill in your property details.</li>
+      <li class="mb-2"><strong>Editing a listing</strong> — Open your listing and click the Edit button (only visible to the owner).</li>
+      <li class="mb-2"><strong>Leaving a review</strong> — Open any listing and scroll down to the review form.</li>
+      <li class="mb-2"><strong>Account issues</strong> — Try logging out and logging back in.</li>
+    </ul>
+
+  <% } else if (page === "safety") { %>
+    <h2>Safety</h2>
+    <p class="text-muted mt-3">Your safety is our priority. Here are some guidelines:</p>
+    <ul class="mt-3">
+      <li class="mb-2">Always verify listing details before booking.</li>
+      <li class="mb-2">Never share personal financial information with hosts directly.</li>
+      <li class="mb-2">Report suspicious listings using the Report Issue link.</li>
+      <li class="mb-2">Read reviews from other guests before making a decision.</li>
+    </ul>
+
+  <% } else if (page === "cancellation") { %>
+    <h2>Cancellation Policy</h2>
+    <p class="text-muted mt-3">StayVista supports flexible cancellation. Each listing may have its own policy set by the host.</p>
+    <ul class="mt-3">
+      <li class="mb-2"><strong>Flexible</strong> — Full refund up to 24 hours before check-in.</li>
+      <li class="mb-2"><strong>Moderate</strong> — Full refund up to 5 days before check-in.</li>
+      <li class="mb-2"><strong>Strict</strong> — 50% refund up to 7 days before check-in.</li>
+    </ul>
+
+  <% } else if (page === "report") { %>
+    <h2>Report an Issue</h2>
+    <p class="text-muted mt-3">If you've encountered a problem with a listing or user, please contact us:</p>
+    <p><i class="fa-solid fa-envelope"></i> support@stayvista.com</p>
+    <p>We review all reports within 24 hours.</p>
+
+  <% } else if (page === "careers") { %>
+    <h2>Careers</h2>
+    <p class="text-muted mt-3">We're building the future of travel in India. Join our team!</p>
+    <p>Currently we don't have open positions, but feel free to send your resume to <strong>careers@stayvista.com</strong></p>
+
+  <% } else if (page === "blog") { %>
+    <h2>Blog</h2>
+    <p class="text-muted mt-3">Stories, travel tips, and hosting guides — coming soon.</p>
+    <p>Check back later for articles from our community of travellers and hosts.</p>
+
+  <% } else if (page === "contact") { %>
+    <h2>Contact Us</h2>
+    <p class="text-muted mt-3">We'd love to hear from you.</p>
+    <ul class="list-unstyled mt-3">
+      <li class="mb-2"><i class="fa-solid fa-envelope"></i> hello@stayvista.com</li>
+      <li class="mb-2"><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+      <li class="mb-2"><i class="fa-solid fa-location-dot"></i> Mumbai, India</li>
+    </ul>
+
+  <% } else if (page === "privacy") { %>
+    <h2>Privacy Policy</h2>
+    <p class="text-muted mt-3">StayVista respects your privacy. We collect only the data necessary to provide our services.</p>
+    <ul class="mt-3">
+      <li class="mb-2">We do not sell your personal data to third parties.</li>
+      <li class="mb-2">Your password is securely hashed and never stored in plain text.</li>
+      <li class="mb-2">Uploaded images are stored securely on Cloudinary.</li>
+    </ul>
+
+  <% } else if (page === "terms") { %>
+    <h2>Terms of Service</h2>
+    <p class="text-muted mt-3">By using StayVista, you agree to the following:</p>
+    <ul class="mt-3">
+      <li class="mb-2">You must be 18 or older to create an account.</li>
+      <li class="mb-2">Listings must be accurate and not misleading.</li>
+      <li class="mb-2">StayVista reserves the right to remove any listing that violates our guidelines.</li>
+    </ul>
+
+  <% } else { %>
+    <h2>Page Not Found</h2>
+    <p class="text-muted">This page doesn't exist yet.</p>
+  <% } %>
+
+  <a href="/listings" class="btn btn-dark mt-4">Back to Listings</a>
+</div>

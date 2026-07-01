@@ -1,0 +1,71 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="login-container">
+
+    <!-- Left Side -->
+    <div class="login-left">
+        <div class="overlay">
+            <h1>
+                <i class="fa-solid fa-mountain-sun"></i>
+                StayVista
+            </h1>
+
+            <p>
+                Discover beautiful stays, unforgettable experiences,
+                and your next perfect getaway.
+            </p>
+        </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="login-right">
+
+        <div class="login-card">
+
+            <h2>Welcome Back 👋</h2>
+            <p class="text-muted">
+                Login to continue your journey
+            </p>
+
+            <form action="/login" method="POST">
+
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input
+                        type="text"
+                        name="username"
+                        class="form-control"
+                        placeholder="Enter username"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button class="btn btn-danger w-100 login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="text-center mt-4">
+                <p>
+                    Don't have an account?
+                    <a href="/signup">Sign Up</a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

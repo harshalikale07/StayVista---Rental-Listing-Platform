@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold fs-4 text-danger" href="/">
+  <i class="fa-solid fa-mountain-sun"></i> StayVista
+</a>
+
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="/">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="/listings">Listings</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="/listings/new">Create</a>
+        </li>
+
+        <!-- Airbnb-style rounded search -->
+        <li class="nav-item d-none d-lg-block">
+        <form action="/listings" method="GET" class="airbnb-search">
+
+  <input 
+    type="text" 
+    name="search" 
+    placeholder="Search destinations"
+    value="<%= locals.search || '' %>"
+  >
+
+  <button type="submit">
+    🔍
+  </button>
+
+</form>
+        </li>
+
+      </ul>
+
+      <!-- Right Icons -->
+      <!-- Right Side Auth Buttons -->
+       <!-- Right Side Auth Buttons -->
+<div class="d-flex align-items-center gap-2">
+
+    <% if(!locals.currUser){ %>
+
+    <a href="/login" class="btn btn-outline-dark rounded-pill px-3">
+        Login
+    </a>
+
+    <a href="/signup" class="btn btn-danger rounded-pill px-3">
+        Sign Up
+    </a>
+
+<% } else { %>
+
+    <span class="fw-semibold text-dark">
+        Hi, <%= locals.currUser.username %>
+    </span>
+
+    <a href="/logout" class="btn btn-outline-danger rounded-pill px-3">
+        Logout
+    </a>
+
+<% } %>
+
+</div>
+
+    </div>
+
+  </div>
+
+
+
+
+</nav>

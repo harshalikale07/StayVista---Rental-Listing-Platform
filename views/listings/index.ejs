@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate") %>
+
+<!-- Search result feedback -->
+<% if (typeof search !== "undefined" && search) { %>
+  <p class="text-muted mt-3">
+    Showing results for "<strong><%= search %></strong>"
+    — <a href="/listings">Clear</a>
+  </p>
+<% } %>
+
+
+
+<% if (allListings.length === 0) { %>
+  <div class="text-center mt-5">
+    <p class="fs-5 text-muted">No listings found<% if (search) { %> for "<%= search %>"<% } %>.</p>
+    <a href="/listings" class="btn btn-dark mt-2">Show All Listings</a>
+  </div>
+<% } else { %>
+
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4 mt-1">
+    <% for (let listing of allListings) { %>
+      <div class="col">
+        <a href="/listings/<%= listing._id %>" class="listing-link text-decoration-none">
+          <div class="card h-100 border-0 shadow-sm">
+            <% if (listing.image && listing.image.url) { %>
+              <img
+                src="<%= listing.image.url %>"
+                class="card-img-top"
+                alt="listing_image"
+                style="height:220px; object-fit:cover;"
+              />
+            <% } %>
+            <div class="card-body">
+              <h6 class="card-title fw-bold mb-1"><%= listing.title %></h6>
+              <p class="text-muted mb-1" style="font-size:0.85rem;">
+                <i class="fa-solid fa-location-dot"></i>
+                <%= listing.location %>, <%= listing.country %>
+              </p>
+              <p class="fw-semibold mb-0">₹ <%= listing.price.toLocaleString("en-IN") %> / night</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% } %>
+  </div>
+
+<% } %>
